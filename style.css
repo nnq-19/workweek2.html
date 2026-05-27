@@ -8,11 +8,12 @@ body {
 
 header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                      url('https://cdn-media.sforum.vn/storage/app/media/anh-vinh-ha-long-9.jpg'); 
+                      url('https://images.unsplash.com/photo-1596402184320-417d7178b2cd?q=80&w=2000'); 
     background-size: cover;
     background-position: center;
-    padding: 60px 30px; 
+    padding: 100px 30px; 
     color: white;
+    text-align: center;
 }
 
 
