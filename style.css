@@ -11,7 +11,7 @@ header {
                       url('https://www.istockphoto.com/photo/dau-go-island-halong-bay-sunset-cruise-vietnam-gm1216347894-354644134?utm_source=pixabay&utm_medium=affiliate&utm_campaign=sponsored_image&utm_content=srp_topbanner_media&utm_term=halong+bay'); 
     background-size: cover;
     background-position: center;
-    padding: 60px 30px; /* Tăng padding để thấy ảnh rõ hơn */
+    padding: 60px 30px; 
     color: white;
 }
 
@@ -100,9 +100,17 @@ h2 {
 }
 
 /* Images responsive */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 16px auto;
+/* Khung chứa để dàn hàng ngang */
+.image-container {
+    display: flex;            /* Kích hoạt chế độ dàn hàng ngang */
+    justify-content: center;  /* Căn giữa các ảnh theo chiều ngang */
+    gap: 10px;                /* Tạo khoảng cách nhỏ giữa các ảnh */
+    width: 100%;              /* Đảm bảo khung chứa rộng hết trang */
+}
+
+/* Định dạng cho từng ảnh bên trong */
+.image-container img {
+    width: 32%;               /* Mỗi ảnh chiếm khoảng 1/3 chiều rộng để không bị tràn */
+    height: auto;             /* Giữ đúng tỉ lệ ảnh */
+    object-fit: cover;        /* Giúp ảnh không bị méo nếu tỉ lệ khác nhau */
 }
