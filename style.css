@@ -1,0 +1,104 @@
+
+body {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #1a3a5c;
+  padding: 20px 30px;
+}
+
+
+nav {
+  background-color: #2e6da4;
+  padding: 10px 30px;
+}
+
+
+main {
+  background-color: #f0f4f8;
+  font-size: 1.05em;
+  padding: 30px 40px;
+  min-height: 400px;
+}
+
+
+footer {
+  background-color: #1a3a5c;
+  color: #cce0f5;
+  text-align: center;
+  padding: 16px 30px;
+  font-size: 0.9em;
+}
+
+
+li {
+  display: inline-block;
+  width: auto;
+  padding: 0 12px;
+}
+
+
+h1 {
+  text-align: center;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  color: #cce0f5;
+  margin: 0;
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+
+
+p {
+  line-height: 1.8;
+  color: #2c3e50;
+  margin-bottom: 1em;
+}
+
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Georgia", serif;
+  font-size: 1em;
+  padding: 6px 4px;
+  display: inline-block;
+  transition: color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #ffd966;
+  text-decoration: underline;
+}
+
+/* Active page indicator */
+nav a.active {
+  color: #ffd966;
+  font-weight: bold;
+}
+
+/* Headings inside main */
+h2 {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  color: #1a3a5c;
+  border-bottom: 2px solid #2e6da4;
+  padding-bottom: 6px;
+}
+
+/* Images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 16px auto;
+}
