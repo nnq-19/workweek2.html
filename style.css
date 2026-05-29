@@ -19,13 +19,6 @@ body {
 
 /* HEADER: Màu xanh navy đậm như ảnh 2 */
 header {
-    background-image: url('https://bizweb.dktcdn.net/100/417/071/files/ha-long-tuan-chau-2-ngay-1-dem-5e5642a3b1b03.jpg?v=1617437310672'); /* Thay thế bằng đường dẫn thực tế đến ảnh */
-    background-size: cover;    /* Để ảnh nền che phủ toàn bộ header */
-    background-position: center; /* Để ảnh nền được căn giữa */
-    background-repeat: no-repeat; /* Để ảnh nền không lặp lại */
-    /* Thêm padding để tạo không gian cho văn bản và ảnh nền */
-    padding: 80px 0;          /* Ví dụ padding trên và dưới 80px */
-}
   background-color: #243a52; 
   color: white;
   text-align: center;
