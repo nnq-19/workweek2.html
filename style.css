@@ -14,35 +14,49 @@ body {
   background: #ffd966;
   padding: 10px;
   z-index: 100;
+  text-decoration: none;
+  color: #333;
 }
 .skip-link:focus { top: 0; }
 
-/* HEADER: Màu xanh navy đậm như ảnh 2 */
+/* HEADER: Có ảnh nền và căn giữa chữ */
 header {
-  background-color: #243a52; 
+  /* Thêm ảnh nền ở đây */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                    url('https://images.unsplash.com/photo-1552423126-78712e030018?q=80&w=1920');
+  background-size: cover;
+  background-position: center;
   color: white;
   text-align: center;
-  padding: 80px 20px;
+  padding: 100px 20px; /* Tăng padding để thấy ảnh nền rõ hơn */
 }
 
-h1 { margin: 0; font-size: 3em; }
+h1 { 
+  margin: 0; 
+  font-size: 3.5em; 
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Đổ bóng để chữ nổi trên nền ảnh */
+}
 
-/* NAVIGATION: Yêu cầu rộng 80% và inline-block */
+/* NAVIGATION: Rộng 80%, inline-block và căn giữa */
 nav {
   background-color: #2e6da4;
-  padding: 10px;
+  padding: 10px 20px;
   display: inline-block;
   width: 80%;
   margin: 0 10%;
   text-align: center;
-  box-sizing: border-box; /* Quan trọng để không bị tràn */
+  box-sizing: border-box;
+  margin-top: -30px; /* Đẩy nav lên một chút để đè nhẹ lên header cho hiện đại */
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-/* SỬA LỖI: Bộ chọn hậu duệ cho ảnh trong nav (Logo) */
-nav img {
-  width: 10%; /* Yêu cầu bài tập: Rộng 10% */
+/* Logo trong nav - Giới hạn kích thước để không bị lỗi to quá khổ */
+.nav-icon {
+  width: 50px; /* Cố định kích thước thay vì dùng % để ổn định hơn */
   height: auto;
   vertical-align: middle;
+  margin-right: 15px;
 }
 
 nav ul {
@@ -50,63 +64,75 @@ nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  vertical-align: middle;
 }
 
-/* Yêu cầu: Comment li và tạo kiểu mới */
+/* Yêu cầu: Comment li cũ và tạo kiểu mới */
 /* li { display: inline-block; } */
 nav li {
   display: inline-block;
   padding: 0 15px;
 }
 
-nav a { color: white; text-decoration: none; font-weight: bold; }
-nav a.active { color: #ffd966; }
+nav a { 
+  color: white; 
+  text-decoration: none; 
+  font-weight: bold; 
+  transition: 0.3s;
+}
+
+nav a:hover { color: #ffd966; }
 
 /* MAIN CONTENT */
 main {
   background-color: white;
   max-width: 1000px;
-  margin: 20px auto;
-  padding: 30px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 40px auto;
+  padding: 40px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  border-radius: 8px;
 }
 
-/* LỚP GRID: 2 cột x 40% */
+h2 { color: #1a3a5c; border-bottom: 2px solid #2e6da4; padding-bottom: 10px; }
+
+/* LỚP GRID: 2 cột x 40% (Đúng yêu cầu bài tập) */
 .grid {
   display: grid;
-  grid-template-columns: 40% 40%; /* Yêu cầu bài tập */
+  grid-template-columns: 40% 40%; 
   justify-content: center;
   gap: 20px;
   margin: 30px 0;
 }
 
-/* Bộ chọn hậu duệ cho ảnh trong Grid rộng 100% */
 .grid img {
   width: 100%;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
   border: 2px solid #2e6da4;
+  border-radius: 4px;
 }
 
-/* LỚP FLEX: Dàn hàng ngang */
+/* LỚP FLEX: Dàn hàng ngang (Flex-wrap theo yêu cầu) */
 .flex {
   display: flex;
-  flex-wrap: wrap; /* Yêu cầu bài tập */
-  justify-content: space-around;
+  flex-wrap: wrap; 
+  justify-content: space-between;
   padding: 20px 0;
 }
 
 .flex img {
-  width: 30%;
-  height: 150px;
+  width: 32%; /* Gần bằng 30% để chia 3 ảnh một hàng */
+  height: 180px;
   object-fit: cover;
   border-radius: 8px;
+  margin-bottom: 15px;
 }
 
+/* FOOTER */
 footer {
   background-color: #1a3a5c;
   color: white;
   text-align: center;
-  padding: 20px;
-  margin-top: 20px;
+  padding: 30px;
+  margin-top: 40px;
 }
