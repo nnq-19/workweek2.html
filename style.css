@@ -40,26 +40,26 @@ h1 {
 
 /* --- CẬP NHẬT NAVIGATION --- */
 nav {
-  /* Màu xanh dương sáng để làm nổi bật các link */
-  background-color: #2e6da4; 
-  padding: 12px 20px;
-  display: block;      /* Để thanh menu trải dài */
-  width: 100%;         /* Chiếm trọn chiều ngang để đồng nhất với header */
+  /* Đây là mã màu xanh dương trung bình để làm nổi bật các link */
+  background-color: #2e6da4 !important; 
+  padding: 15px 0;
+  display: block;
+  width: 100%;
   text-align: center;
   box-sizing: border-box;
-  margin: 0;           /* Loại bỏ margin để khít với header phía trên */
+  /* Đảm bảo thanh này nằm sát Header */
+  margin: 0; 
 }
 
-/* Tinh chỉnh icon để không bị quá to và nằm cân đối */
+/* Tinh chỉnh icon và text trong nav */
 .nav-icon {
   width: auto;
-  max-width: 45px;     /* Kích thước vừa phải cho icon toàn cầu */
+  max-width: 45px; /* Giữ icon nhỏ gọn */
   height: auto;
   vertical-align: middle;
   margin-right: 15px;
 }
 
-/* Căn chỉnh danh sách link */
 nav ul {
   display: inline-block;
   list-style: none;
@@ -74,11 +74,15 @@ nav li {
 }
 
 nav a {
-  color: white;        /* Chữ trắng trên nền xanh nổi bật */
+  color: white;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1em;
-  transition: 0.3s;
+}
+
+/* Màu vàng cho link đang hoạt động trên nền xanh dương này */
+nav a.active, nav a:hover {
+  color: #ffcc00; 
 }
 
 /* Hiệu ứng khi di chuột hoặc link đang active */
