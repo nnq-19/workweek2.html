@@ -38,24 +38,28 @@ h1 {
   margin-bottom: 20px;
 }
 
+/* --- CẬP NHẬT NAVIGATION --- */
 nav {
-  /* QUAN TRỌNG: Đổi thành transparent để dùng chung màu với Header */
-  background-color: transparent !important;
-  display: block;
-  width: 100%;
+  /* Màu xanh dương sáng để làm nổi bật các link */
+  background-color: #2e6da4; 
+  padding: 12px 20px;
+  display: block;      /* Để thanh menu trải dài */
+  width: 100%;         /* Chiếm trọn chiều ngang để đồng nhất với header */
   text-align: center;
   box-sizing: border-box;
-  margin-top: -10px; /* Thu hẹp khoảng cách với h1 */
+  margin: 0;           /* Loại bỏ margin để khít với header phía trên */
 }
 
+/* Tinh chỉnh icon để không bị quá to và nằm cân đối */
 .nav-icon {
   width: auto;
-  max-width: 50px;
+  max-width: 45px;     /* Kích thước vừa phải cho icon toàn cầu */
   height: auto;
   vertical-align: middle;
   margin-right: 15px;
 }
 
+/* Căn chỉnh danh sách link */
 nav ul {
   display: inline-block;
   list-style: none;
@@ -66,18 +70,20 @@ nav ul {
 
 nav li {
   display: inline-block;
-  padding: 0 15px;
+  padding: 0 20px;
 }
 
 nav a {
-  color: white;
+  color: white;        /* Chữ trắng trên nền xanh nổi bật */
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.1em;
   transition: 0.3s;
 }
 
+/* Hiệu ứng khi di chuột hoặc link đang active */
 nav a:hover, nav a.active {
-  color: #ffcc00; /* Màu vàng khi di chuột hoặc trang chủ */
+  color: #ffcc00;      /* Màu vàng kim để tạo điểm nhấn mạnh mẽ */
 }
 
 /* --- 3. NỘI DUNG CHÍNH (MAIN) --- */
