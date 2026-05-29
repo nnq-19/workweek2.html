@@ -1,4 +1,4 @@
-/* --- CÀI ĐẶT CHUNG --- */
+/* --- 1. CÀI ĐẶT CHUNG & SKIP LINK --- */
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
@@ -6,7 +6,6 @@ body {
   background-color: #f4f7f6;
 }
 
-/* SKIP LINK */
 .skip-link {
   position: absolute;
   top: -100px;
@@ -19,41 +18,36 @@ body {
 }
 .skip-link:focus { top: 0; }
 
-/* HEADER: Có ảnh nền và căn giữa chữ */
+/* --- 2. HEADER & NAVIGATION (Gộp màu Navy đồng nhất) --- */
 header {
-  /* Thêm ảnh nền ở đây */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                    url('https://images.unsplash.com/photo-1552423126-78712e030018?q=80&w=1920');
-  background-size: cover;
-  background-position: center;
-  color: white;
+  background-color: #1e3a5a; /* Màu xanh navy sâu đẹp */
+  padding: 60px 0 20px 0;    /* Padding chuẩn để căn giữa nội dung */
   text-align: center;
-  padding: 100px 20px; /* Tăng padding để thấy ảnh nền rõ hơn */
+  color: white;
 }
 
-h1 { 
-  margin: 0; 
-  font-size: 3.5em; 
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Đổ bóng để chữ nổi trên nền ảnh */
+h1 {
+  margin: 0;
+  font-size: 3.5em;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: #ffd700;            /* Màu vàng kim nổi bật */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  margin-bottom: 20px;
 }
 
-/* NAVIGATION: Rộng 80%, inline-block và căn giữa */
 nav {
-  background-color: #2e6da4;
-  padding: 10px 20px;
-  display: inline-block;
-  width: 80%;
-  margin: 0 10%;
+  background-color: transparent !important; /* Loại bỏ nền riêng để tiệp với Header */
+  display: block;
+  width: 100%;
   text-align: center;
   box-sizing: border-box;
-  margin-top: -30px; /* Đẩy nav lên một chút để đè nhẹ lên header cho hiện đại */
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-/* Logo trong nav - Giới hạn kích thước để không bị lỗi to quá khổ */
+/* Fix Logo không bị to quá khổ */
 .nav-icon {
-  width: 50px; /* Cố định kích thước thay vì dùng % để ổn định hơn */
+  width: auto;
+  max-width: 50px;           /* Khống chế kích thước logo chuẩn */
   height: auto;
   vertical-align: middle;
   margin-right: 15px;
@@ -67,23 +61,23 @@ nav ul {
   vertical-align: middle;
 }
 
-/* Yêu cầu: Comment li cũ và tạo kiểu mới */
-/* li { display: inline-block; } */
 nav li {
   display: inline-block;
   padding: 0 15px;
 }
 
-nav a { 
-  color: white; 
-  text-decoration: none; 
-  font-weight: bold; 
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
   transition: 0.3s;
 }
 
-nav a:hover { color: #ffd966; }
+nav a:hover, nav a.active {
+  color: #ffd700;            /* Highlight màu vàng kim cho menu */
+}
 
-/* MAIN CONTENT */
+/* --- 3. NỘI DUNG CHÍNH (MAIN) --- */
 main {
   background-color: white;
   max-width: 1000px;
@@ -112,7 +106,7 @@ h2 { color: #1a3a5c; border-bottom: 2px solid #2e6da4; padding-bottom: 10px; }
   border-radius: 4px;
 }
 
-/* LỚP FLEX: Dàn hàng ngang (Flex-wrap theo yêu cầu) */
+/* LỚP FLEX: Dàn hàng ngang */
 .flex {
   display: flex;
   flex-wrap: wrap; 
@@ -121,16 +115,16 @@ h2 { color: #1a3a5c; border-bottom: 2px solid #2e6da4; padding-bottom: 10px; }
 }
 
 .flex img {
-  width: 32%; /* Gần bằng 30% để chia 3 ảnh một hàng */
+  width: 32%; 
   height: 180px;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 15px;
 }
 
-/* FOOTER */
+/* --- 4. FOOTER --- */
 footer {
-  background-color: #1a3a5c;
+  background-color: #1e3a5a; /* Đồng bộ màu với Header */
   color: white;
   text-align: center;
   padding: 30px;
